@@ -11,7 +11,8 @@ export const metadata: Metadata = {
       default: "HeliusArt",
       template: "%s | HeliusArt",
    },
-   description: "Keramika",
+   description:
+      "Mgr. art. Helena Pohanková je slovenská keramička s 20-ročnou skúsenosťou v tomto odbore. Absolvovala Vysokú školu výtvarných umení v Bratislave (VŠVU), kde získala titul Mgr. art.",
 };
 
 export default function RootLayout({
