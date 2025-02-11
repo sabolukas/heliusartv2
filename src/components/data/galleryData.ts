@@ -114,8 +114,8 @@ const galleryData = [
          img18,
          img14,
          img19,
-         img20,
-         img21,
+         // img20,
+         // img21,
       ],
       // data_thmb: [
       //    thmb_img15,
@@ -150,9 +150,9 @@ const galleryData = [
          img32,
          img33,
          img34,
-         img35,
-         img36,
-         img37,
+         // img35,
+         // img36,
+         // img37,
       ],
       // data_thmb: [
       //    thmb_img27,
