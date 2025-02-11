@@ -1,3 +1,4 @@
+import React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -22,7 +23,9 @@ export default function RootLayout({
 }>) {
    return (
       <html lang="en">
-         <body className={`${inter.className} antialiased max-w-screen-xl px-10 mx-auto`}>
+         <body
+            className={`${inter.className} antialiased max-w-screen-xl px-10 mx-auto relative`}
+         >
             <Header />
             {children}
             <Footer />

@@ -10,7 +10,7 @@ const Page = () => {
                Ak máte akúkoľvek otázku, prosím kontaktujte ma cez email alebo na
                telefónnom čísle.
             </p>
-            <h3>HeliusArt</h3>
+            <h3 className="text-lg">HeliusArt</h3>
             <p>
                Železničiarska 6 <br />
                811 04 Bratislava

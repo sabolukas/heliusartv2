@@ -4,9 +4,16 @@ import { Facebook, Instagram } from "lucide-react";
 
 const Header = () => {
    return (
-      <div className="flex items-center justify-between py-5 bg-white uppercase">
+      <div className="w-full flex items-center justify-between py-5 bg-white uppercase">
          <Link href="/">
-            <Image src="/logo.png" alt="logo" width="240" height="100" className="w-24" />
+            <Image
+               src="/logo.png"
+               alt="logo"
+               width="240"
+               height="100"
+               className="w-24"
+               priority={true}
+            />
          </Link>
          <div className="flex gap-10 items-center">
             <Link href="/galeria">Galéria</Link>
