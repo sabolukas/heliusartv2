@@ -1,4 +1,4 @@
-const Page = ({ children }: { children: React.ReactNode }) => {
+const Page = () => {
    return <div></div>;
 };
 
