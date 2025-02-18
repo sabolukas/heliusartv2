@@ -11,7 +11,7 @@ type Props = {
 
 const ModalImage = ({ imageSrc, onLeftArrow, onRightArrow, onClose }: Props) => {
    useEffect(() => {
-      const listener = (e: any) => {
+      const listener = (e: KeyboardEvent) => {
          if (e.key === "ArrowLeft") {
             onLeftArrow();
          }
@@ -31,13 +31,30 @@ const ModalImage = ({ imageSrc, onLeftArrow, onRightArrow, onClose }: Props) => 
    }, [onLeftArrow, onRightArrow, onClose]);
 
    return (
-      <div>
-         <ChevronLeft onClick={onLeftArrow} />
+      <div className="fixed top-0 left-0 z-50 flex items-center justify-center w-full h-full bg-black bg-opacity-70">
+         <ChevronLeft
+            onClick={onLeftArrow}
+            size={40}
+            className="absolute left-[1vw] md:left-8 top-1/2 text-stone-50 cursor-pointer hover:bg-stone-600 hover:rounded-full"
+         />
 
-         <Image draggable={false} className="" src={imageSrc} alt={""} />
+         <Image
+            draggable={false}
+            className="max-h-[90vh] object-contain rounded select-none"
+            src={imageSrc}
+            alt={""}
+         />
 
-         <ChevronRight onClick={onRightArrow} />
-         <X onClick={onClose} />
+         <ChevronRight
+            onClick={onRightArrow}
+            size={40}
+            className="absolute right-[1vw] md:right-8 top-1/2 text-stone-50 cursor-pointer hover:bg-stone-600 hover:rounded-full"
+         />
+         <X
+            onClick={onClose}
+            size={30}
+            className="absolute right-[2vw] md:right-8 top-[2vw] md:top-8 text-stone-50 cursor-pointer hover:bg-stone-600 hover:rounded-full"
+         />
       </div>
    );
 };

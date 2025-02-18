@@ -4,6 +4,7 @@ import { ChevronLeft } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import ModalImage from "@/components/ModalImage";
 import { useState } from "react";
+import { isMobile } from "react-device-detect";
 
 type Props = {
    name: string;
@@ -13,25 +14,32 @@ type Props = {
 const OneProduct = ({ name, data }: Props) => {
    const [imgIndex, setImgIndex] = useState<number | null>(null);
 
+   if (imgIndex !== null && imgIndex < 0) {
+      setImgIndex(data.length - 1);
+   } else if (imgIndex !== null && imgIndex > data.length - 1) {
+      setImgIndex(0);
+   }
+
    return (
       <div>
-         <h3 className="flex items-center gap-1 uppercase pt-4 pb-4">
+         <h3 className="flex items-center gap-1 uppercase py-4 select-none">
             <Link href={"/galeria"} className="flex items-center hover:opacity-70">
                <ChevronLeft strokeWidth={1.5} size={24} />
                Galéria
             </Link>
             / {name}
          </h3>
-         <div className="flex flex-wrap gap-[15px]">
+         <div className="flex flex-wrap gap-3">
             {data.map((oneImage, index) => (
                <div
                   key={index}
-                  className={`flex h-72 flex-grow overflow-hidden rounded ${data.length <= 3 ? "max-w-[33%] basis-[32%]" : "max-w-[24%]"}`}
+                  className={`flex sm:h-72 flex-grow overflow-hidden rounded ${data.length <= 3 ? "customLg:max-w-[33%] sm:max-w-[48.5%] w-full" : "customXl:max-w-[24%] customLg:max-w-[32.2%] sm:max-w-[48.5%] w-full"}`}
                >
                   <Image
                      src={oneImage}
                      alt={name}
-                     className="w-full h-full object-cover rounded hover:scale-[101%] transition cursor-pointer"
+                     onClick={() => !isMobile && setImgIndex(index)}
+                     className="w-full h-full sm:object-cover rounded sm:hover:scale-[101%] transition cursor-pointer select-none"
                   />
                </div>
             ))}
