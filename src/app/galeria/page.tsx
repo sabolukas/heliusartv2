@@ -13,6 +13,7 @@ const Page = () => {
                <Link href={`/galeria/${id}`}>
                   <Image
                      src={data[0]}
+                     placeholder="blur"
                      alt={name}
                      className="w-full h-full object-cover rounded sm:hover:scale-[101%] transition cursor-pointer select-none"
                   />

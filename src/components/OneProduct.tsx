@@ -38,6 +38,7 @@ const OneProduct = ({ name, data }: Props) => {
                   <Image
                      src={oneImage}
                      alt={name}
+                     placeholder="blur"
                      onClick={() => !isMobile && setImgIndex(index)}
                      className="w-full h-full sm:object-cover rounded sm:hover:scale-[101%] transition cursor-pointer select-none"
                   />
@@ -50,6 +51,7 @@ const OneProduct = ({ name, data }: Props) => {
                onLeftArrow={() => setImgIndex(imgIndex - 1)}
                onRightArrow={() => setImgIndex(imgIndex + 1)}
                onClose={() => setImgIndex(null)}
+               name={name}
             />
          )}
       </div>

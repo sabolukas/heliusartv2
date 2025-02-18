@@ -7,9 +7,10 @@ type Props = {
    onLeftArrow: () => void;
    onRightArrow: () => void;
    onClose: () => void;
+   name: string;
 };
 
-const ModalImage = ({ imageSrc, onLeftArrow, onRightArrow, onClose }: Props) => {
+const ModalImage = ({ imageSrc, onLeftArrow, onRightArrow, onClose, name }: Props) => {
    useEffect(() => {
       const listener = (e: KeyboardEvent) => {
          if (e.key === "ArrowLeft") {
@@ -39,10 +40,9 @@ const ModalImage = ({ imageSrc, onLeftArrow, onRightArrow, onClose }: Props) => 
          />
 
          <Image
-            draggable={false}
             className="max-h-[90vh] object-contain rounded select-none"
             src={imageSrc}
-            alt={""}
+            alt={name}
          />
 
          <ChevronRight
