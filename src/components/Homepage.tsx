@@ -2,10 +2,10 @@ import Slider from "@/components/Slider";
 
 const Homepage = () => {
    return (
-      <div className="flex flex-col items-center justify-center gap-10 pb-10 w-full">
+      <div className="flex flex-col items-center justify-center gap-10 pb-10 w-full select-none">
          <Slider />
-         <h1 className="text-center text-2xl">Mgr.Art. Helena Pohanková</h1>
-         <p className="text-center">
+         <h1 className="text-center text-2xl px-4 sm:px-0">Mgr.Art. Helena Pohanková</h1>
+         <p className="text-center px-4 sm:px-0">
             Mgr. art. Helena Pohanková je slovenská keramička s 20-ročnou skúsenosťou v
             tomto odbore. Absolvovala Vysokú školu výtvarných umení v Bratislave (VŠVU),
             kde získala titul Mgr. art. Počas svojej kariéry sa venovala rôznym technikám

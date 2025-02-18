@@ -14,9 +14,9 @@ const Page = () => {
                   <Image
                      src={data[0]}
                      alt={name}
-                     className="w-full h-full object-cover rounded hover:scale-[101%] transition cursor-pointer"
+                     className="w-full h-full object-cover rounded sm:hover:scale-[101%] transition cursor-pointer select-none"
                   />
-                  <button className="absolute left-4 bottom-4 w-52 h-10 bg-gray-300/60 backdrop-blur-sm border border-white/60 rounded-sm text-white text-sm transition-opacity hover:opacity-95 hover:border-white/40">
+                  <button className="absolute left-4 bottom-4 w-52 h-10 bg-gray-300/60 backdrop-blur-sm border border-white/60 rounded-sm text-white text-sm transition-opacity hover:opacity-95 hover:border-white/40 select-none">
                      {name}
                   </button>
                </Link>

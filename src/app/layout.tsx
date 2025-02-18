@@ -24,7 +24,7 @@ export default function RootLayout({
    return (
       <html lang="en">
          <body
-            className={`${inter.className} antialiased max-w-screen-xl px-10 mx-auto relative`}
+            className={`${inter.className} antialiased max-w-screen-xl sm:px-10 mx-auto relative`}
          >
             <Header />
             {children}

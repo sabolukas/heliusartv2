@@ -1,6 +1,6 @@
 const Footer = () => {
    return (
-      <div className="flex items-center gap-10 text-sm leading-tight py-10 opacity-70">
+      <div className="flex items-center gap-10 text-sm leading-tight py-10 px-4 sm:px-0 opacity-70">
          <div className="flex flex-col items-start">
             <span>HeliusArt</span>
             <span>Ceramics</span>

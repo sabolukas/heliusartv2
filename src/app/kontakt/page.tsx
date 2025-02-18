@@ -4,7 +4,7 @@ const Page = () => {
    return (
       <div className="w-full h-full">
          <Slider />
-         <div className="flex flex-col justify-start gap-3 py-10">
+         <div className="flex flex-col justify-start gap-3 py-10 px-4 sm:px-0">
             <h2 className="text-xl">Neváhajte ma kontaktovať</h2>
             <p>
                Ak máte akúkoľvek otázku, prosím kontaktujte ma cez email alebo na
